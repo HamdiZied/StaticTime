@@ -1,0 +1,20 @@
+.Date{
+    width: 40%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: rgba(216, 222, 226,.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+ h1,h3{ 
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
