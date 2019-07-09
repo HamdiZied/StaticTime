@@ -1,20 +1,14 @@
-.Date{
-    width: 40%;
-    height: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    background-color: rgba(216, 222, 226,.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.time-container {
+    text-align: center;
 }
-
-
- h1,h3{ 
+.time-inner-container {
+    display: inline-block;
+}
+.time-digits {
+    font-size: 4em;
+}
+.time-text {
     display: flex;
-    justify-content: center;
-    margin: 10px;
+    justify-content: space-around;
+    color: grey;
 }

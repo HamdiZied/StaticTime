@@ -4,9 +4,13 @@ import Timer from  './Timer';
 
 function App() {
   return (
-    <div className="Timer">
-    <Timer />
+ 
+    <div>
+       <Timer ms={215478458} />
+       <Timer ms={15120000} />
+       <Timer ms={6310000} />
   </div>
+
   );
 }
 

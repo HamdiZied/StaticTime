@@ -1,33 +1,33 @@
 import React from 'react';
-const Timer=()=>{
-    return (
-        <div className="Date">
-             <div className="hours">
-                 <div className="Number-hours">
-                    <h1>00</h1>
-                    <h3>Hours</h3>
-                 </div>
-             </div>
 
-             <div className="minute">
-                 <div className="Number-second">
-                    <h1>00</h1>
-                    <h3>Minutes</h3>
-                 </div>
-             </div>
+const msToTime = ms => {
+    const msPerSecond = 1000
+    const msPerMinute = msPerSecond * 60
+    const msPerHour = msPerMinute * 60
 
-             <div className="second">
-                 <div className="Number-second">
-                    <h1>00</h1>
-                    <h3>Second</h3>
-                 </div>
-             </div>
+    const hours = Math.floor(ms / msPerHour)
+    const hoursRest = ms % msPerHour
+    const minutes = Math.floor(hoursRest / msPerMinute)
+    const minutesRest = hoursRest % msPerMinute
+    const seconds = Math.floor(minutesRest / msPerSecond)
+    return String(hours).padStart(2, '0') +
+        ':' + String(minutes).padStart(2, '0') +
+        ':' + String(seconds).padStart(2, '0')
+}
 
-           
-           
+const Time = ({ms}) => {
+    return <div className="time-container">
+        <div className="time-inner-container">
+            <div className="time-digits">
+                {msToTime(ms)}
+            </div>
+            <div className="time-text">
+                <div className="time-text-item">Hour</div>
+                <div className="time-text-item">Minute</div>
+                <div className="time-text-item">Second</div>
+            </div>
         </div>
-    )
-         
-    } 
+    </div>
+}
     
-export default Timer;
+export default Time
